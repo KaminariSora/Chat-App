@@ -19,7 +19,7 @@ io.on('connection', function(socket){
   socket.on("exituser",function(username){
     socket.broadcast.emit("update", username + " left the conversation");
   });
-  socket.on("chat",function(username){
+  socket.on("chat",function(message){
     socket.broadcast.emit("chat", message);
   });
 });

@@ -41,7 +41,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, 50%);
+            transform: translate(-50%, -50%);
             width: 80%;
             max-width: 400px;
         }
@@ -123,13 +123,14 @@
             max-width: 80%;
             background: #fff;
             box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0,05);
+            padding: 10px;
         }
 
-        .chat-screen .messages .message .my-message {
+        .chat-screen .messages .message.my-message {
             justify-content: flex-end;
         }
 
-        .chat-screen .messages .message .other-message {
+        .chat-screen .messages .message.other-message {
             justify-content: flex-start;
         }
 
@@ -194,6 +195,7 @@
                 <button id="exit-chat">Exit</button>
             </div>
             <div class="messages">
+                <div class="update"></div>
             </div>
             <div class="typebox">
                 <input type="text" id="message-input">

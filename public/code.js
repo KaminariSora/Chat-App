@@ -1,3 +1,5 @@
+// const { render } = require("express/lib/response");
+
 (function(){
 
     const app = document.querySelector(".app");
@@ -36,6 +38,13 @@
         socket.emit("exituser",uname);
         window.location.href = window.location.href;
     })
+
+    socket.on("update", function(update){
+        renderMessage("update",update);
+    });
+    socket.on("chat", function(message){
+        renderMessage("other",message);
+    });
 
     function renderMessage(type,message){
         let messageContainer = app.querySelector(".chat-screen .messages");
