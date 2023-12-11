@@ -121,12 +121,24 @@ body {
     padding: 10px;
 }
 
-.chat-screen .messages .message.my-message {
+.chat-screen .messages .message.my-message,
+.chat-screen .image .image.my-image {
     justify-content: flex-end;
 }
 
-.chat-screen .messages .message.other-message {
+.chat-screen .messages .message.other-message,
+.chat-screen .image .image.other-image {
     justify-content: flex-start;
+}
+
+.image.my-image {
+    width: 200px;
+    justify-content: flex-end;
+}
+
+.my-image {
+    width: 200px;
+    justify-content: flex-end;
 }
 
 .chat-screen .messages .message .name {
